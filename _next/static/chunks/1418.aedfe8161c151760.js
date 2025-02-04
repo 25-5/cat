@@ -1,0 +1,5 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[1418],{21418:function(e,t,r){r.r(t),r.d(t,{extractHighlightsPixelShaderWGSL:function(){return l}});var u=r(35606);r(57104);let a="extractHighlightsPixelShader",n=`#include<helperFunctions>
+varying vUV: vec2f;var textureSamplerSampler: sampler;var textureSampler: texture_2d<f32>;uniform threshold: f32;uniform exposure: f32;
+#define CUSTOM_FRAGMENT_DEFINITIONS
+@fragment
+fn main(input: FragmentInputs)->FragmentOutputs {fragmentOutputs.color=textureSample(textureSampler,textureSamplerSampler,input.vUV);var luma: f32=dot(LuminanceEncodeApprox,fragmentOutputs.color.rgb*uniforms.exposure);fragmentOutputs.color=vec4f(step(uniforms.threshold,luma)*fragmentOutputs.color.rgb,fragmentOutputs.color.a);}`;u.v.ShadersStoreWGSL[a]=n;let l={name:a,shader:n}}}]);

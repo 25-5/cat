@@ -1,0 +1,3 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[4939],{14939:function(t,e,r){r.r(e),r.d(e,{taaPixelShaderWGSL:function(){return i}});var a=r(35606);let n="taaPixelShader",u=`var textureSampler: texture_2d<f32>;var historySampler: texture_2d<f32>;uniform factor: f32;@fragment
+fn main(input: FragmentInputs)->FragmentOutputs {let c=textureLoad(textureSampler,vec2<i32>(fragmentInputs.position.xy),0);let h=textureLoad(historySampler,vec2<i32>(fragmentInputs.position.xy),0);fragmentOutputs.color= mix(h,c,uniforms.factor);}
+`;a.v.ShadersStoreWGSL[n]=u;let i={name:n,shader:u}}}]);
